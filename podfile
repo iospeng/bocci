@@ -1,0 +1,17 @@
+platform :ios, "7.0"
+inhibit_all_warnings!
+
+pod 'AFNetworking'
+pod 'SDWebImage'
+pod 'MJRefresh'
+pod 'MJExtension'
+pod 'IQKeyboardManager'
+pod 'NJKWebViewProgress'
+pod 'SSKeychain'
+pod 'SVProgressHUD'
+pod 'MZFormSheetController'
+pod 'pop'
+pod 'DZNEmptyDataSet'
+pod 'TSMessages'
+pod 'RongCloudIMKit', '2.4.0'
+pod 'SDCycleScrollView','~> 1.61'

@@ -1,0 +1,95 @@
+//
+//  HonestyEducation.pch
+//  HonestyEducation
+//
+//  Created by bocweb on 16/2/24.
+//  Copyright © 2016年 bocweb. All rights reserved.
+//
+
+#ifndef HonestyEducation_pch
+#define HonestyEducation_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "UIButton+BackgroundColor.h"
+#import "UIView+Extension.h"
+#import "NSString+Helper.h"
+#import "MBProgressHUD+RY.h"
+#import "SVProgressHUD.h"
+#import "UIImageView+WebCache.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
+#import "UIImage+CH.h"
+#import "UIScrollView+EmptyDataSet.h"
+
+#import "IQKeyboardManager.h"
+#import "TSMessageView.h"
+
+#import "MJRefresh.h"
+#import "MJExtension.h"
+#import "HttpTool.h"
+#import "NSString+Hash.h"
+#import "UIImage+Base64Str.h"
+
+//单例头文件
+#import "Singleton.h"
+#import "UserInfo.h"
+
+//1. 日志输出宏定义
+#ifdef DEBUG
+// 调试状态
+#define MyLog(...) NSLog(__VA_ARGS__)
+#else
+// 发布状态
+#define MyLog(...)
+#endif
+
+// 2.获得RGB颜色
+
+#define RGBAColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+#define RGBColor(r, g, b) RGBAColor(r,g,b,1.0)
+
+#define kGlobalBg RGBColor(247, 247, 247)
+#define kGlobalLineColor RGBColor(200, 200, 200)
+#define kGlobalTintColor RGBColor(20, 77, 158)
+#define kGlobalDividerColor RGBColor(246, 246, 246)
+
+// 随机色
+#define RandomColor RGBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+//定义高度
+#define kUIScreenSize [UIScreen mainScreen].bounds.size
+#define kUIScreenWidth kUIScreenSize.width
+#define kUIScreenHeight kUIScreenSize.height
+
+#define kNavigationBarHeight 64
+#define kTabBarHeight 49
+
+//URL
+#define KUserInfor [UserInfo sharedUserInfo].userInfo
+#define kBaseURL  @"http://121.41.1.0:9090/qjzl/api/"
+//#define kBaseURL @"http://61.164.37.243:8082/qjzl/api/"
+//通知
+#define KHeaderViewClickedNotification @"HeaderViewClicked"
+#define kDidReceiveRemoteNotification @"DidReceiveRemoteNotification"
+#define KPushToChatVCRemoteNotification @"PushToChatVCRemoteNotification"
+#define KLongPressAddFriendNotification @"LongPressAddFriend"
+#define KSubbmitDocumentNotification @"SubbmitDocument"
+//NSUserDefalts
+#define KNSUserDefaltsWithUserName @"userName"
+#define KSSKeyChainWithServiceName @"QJZLServiceName"
+#define KSSKeyChainWithServiceAccount @"QJZLAccount"
+#define KKeyWithUserInfo @"userInfomation"
+#define KNSUserDefaltsWithJPushToken @"JPushToken"
+
+//屏幕比例
+#define KProportionWidth kUIScreenWidth / 375
+#define KProportionHeight kUIScreenHeight / 667
+
+//pop动画
+#import <POP/POP.h>
+//键盘工具栏
+#import "KeyboardToolBar.h"
+
+#endif
+
